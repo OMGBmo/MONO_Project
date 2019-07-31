@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Futura HV";
+  src: url("../fonts/Futura_HV.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Futura MD";
+  src: url("../fonts/Futura_MD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Futura BK";
+  src: url("../fonts/Futura_BK.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
