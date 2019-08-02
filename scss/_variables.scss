@@ -1,21 +1,12 @@
-@mixin font($font-family, $font-file) {
-  @font-face {
-    font-family: $font-family;
-    src: url($font-file+'.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
-@include font('Futura HV', '../fonts/Futura_HV');
-@include font('Futura MD', '../fonts/Futura_MD');
-@include font('Futura BK', '../fonts/Futura_BK');
 
 $colors:(
+  nav-title: #303031,
   titlecolor: #00367A,
-  textcolor: #9DA8B6,
+  textcolor: #80868E,
   accent-color1: #0052B4,
-  accent-color2: #FF7616
+  accent-color2: #FF7616,
+  border:#E1E1E1,
+  background:#FBFBFB
 );
 
 @function color ($color-name) {

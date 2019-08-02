@@ -1,0 +1,59 @@
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font('Futura HV', '../fonts/Futura_HV');
+@include font('Futura MD', '../fonts/Futura_MD');
+@include font('Futura BK', '../fonts/Futura_BK');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Futura HV';
+}
+
+h1 {
+  font-size: 3.815em;
+  line-height: 1.37;
+  color: color(nav-title);
+}
+
+h2 {
+  font-size: 3.052em;
+  color:color(titlecolor);
+}
+
+h4 {
+  font-size: 1.563em;
+  color:color(titlecolor);
+}
+#hero-text {
+  font-family: 'Futura BK';
+  font-size: 1.25em;
+  color: color(textcolor);
+}
+.sub-text {
+  font-family: 'Futura MD';
+  font-size:1.25em;
+  color:color(textcolor);
+  line-height: 1.75;
+}
+.sub-title {
+  font-family: 'Futura HV';
+  font-size:1.25em;
+  color:color(titlecolor);
+  line-height: 1.75;
+}
+.para-text {
+  font-family: 'Futura BK';
+  font-size:1em;
+  color:color(textcolor);
+  line-height: 1.75;
+}
+.footer-title {
+  font-family: 'Futura MD';
+  color:color(titlecolor);
+}
