@@ -1,14 +1,113 @@
+@import './breakpoints';
 
 $colors:(
-  nav-title: #303031,
-  titlecolor: #00367A,
-  textcolor: #80868E,
-  accent-color1: #0052B4,
-  accent-color2: #FF7616,
-  border:#E1E1E1,
-  background:#FBFBFB
+    nav-title: #303031,
+    titlecolor: #00367A,
+    textcolor: #80868E,
+    accent-color1: #0052B4,
+    accent-color2: #FF7616,
+    border:#E1E1E1,
+    background:#FBFBFB
 );
 
 @function color ($color-name) {
   @return map-get($colors, $color-name)
 };
+
+
+@mixin border-crumb {
+  position: fixed;
+  width: 13rem;
+  z-index: 100;
+  height: 100vh;
+  border-right: 0.0625rem solid color(border);
+  background-color: color(background);
+  a {
+    padding-top: 2rem;
+    display: flex;
+    margin: auto;
+    width: 6.625rem;
+  }
+  @include tablet-landscape {
+    width: 10rem;
+  }
+  @include tablet-potrait {
+    display: none;
+  }
+}
+
+@mixin button {
+    margin-top: 1.25rem;
+    background-color: color(accent-color1);
+    border-radius: 0;
+    color:white;
+    width: 9.0625rem;
+    height: 2.8125rem;
+    padding: 0.575rem 0.75rem;
+    &:hover {
+      color: white;
+      background-color: #014494;
+    }
+}
+
+@mixin sign-up {
+  width: 6.375rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1.5px solid color(accent-color1);
+}
+
+@mixin pulsing-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30px;
+    height: 30px;
+
+    &:before {
+      content: '';
+      position: relative;
+      display: block;
+      width: 300%;
+      height: 300%;
+      box-sizing: border-box;
+      margin-left: -100%;
+      margin-top: -100%;
+      border-radius: 45px;
+      background-color: color(accent-color2);
+      animation: pulse-ring 3.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: color(accent-color2);
+      border-radius: 15px;
+      box-shadow: 0 0 8px rgba(0,0,0,.3);
+      animation: pulse-dot 2.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+    }
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(.11);
+    }
+    80%, 100% {
+      opacity: 0;
+    }
+  }
+  @keyframes pulse-dot {
+    0% {
+      transform: scale(.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(.8);
+    }
+  }
+}

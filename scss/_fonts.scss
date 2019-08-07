@@ -1,3 +1,5 @@
+@import './breakpoints';
+
 @mixin font($font-family, $font-file) {
   @font-face {
     font-family: $font-family;
@@ -19,11 +21,19 @@ h1 {
   font-size: 3.815em;
   line-height: 1.37;
   color: color(nav-title);
+  @include phone {
+    font-size: 2.543rem;
+  }
 }
 
 h2 {
   font-size: 3.052em;
   color:color(titlecolor);
+  margin-bottom: 2rem;
+  @include phone {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 }
 
 h4 {
@@ -40,12 +50,18 @@ h4 {
   font-size:1.25em;
   color:color(textcolor);
   line-height: 1.75;
+  margin-bottom: 7.8125rem;
+  @include phone {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+  }
 }
 .sub-title {
   font-family: 'Futura HV';
   font-size:1.25em;
   color:color(titlecolor);
   line-height: 1.75;
+  margin-bottom: 2rem;
 }
 .para-text {
   font-family: 'Futura BK';
