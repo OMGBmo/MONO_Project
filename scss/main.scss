@@ -1,273 +1,29 @@
-@import './reset';
+/**
+
+ Syoak Main SCSS
+
+ **/
+
+// Variables
 @import './variables';
-@import './fonts';
+
+// Mixins
+@import 'mixins/layout';
+@import 'mixins/elements';
+@import 'mixins/fonts';
+
+// Breakpoints/Global
 @import './breakpoints';
+@import './global';
+@import './typography';
 
-body {
-  background-color: color(background);
-}
-
-.container {
-  margin-left: 0;
-  @include phone {
-    max-width: 100%;
-  }
-  @include tablet-potrait {
-    max-width: 100%;
-  }
-  @include desktop {
-    max-width: 1280px!important;
-  }
-}
-
-
-.wrapper-main {
-  padding-left: calc((100vw - 15rem) * .2 + 2rem);
-  @include tablet-potrait {
-    padding-left: 0!important;
-  }
-}
-
-
-.border-crumb {
-  @include border-crumb;
-}
-
-
-nav {
-  .first-part {
-    width: 100%;
-  }
-  .second-part {
-    min-width: 27rem;
-  }
-  a {
-    @include tablet-potrait {
-      display: block!important;
-    }
-  }
-  #navbarNav {
-    padding-top: 1.2rem;
-    @include tablet-landscape {
-      padding-left: 0!important;
-    }
-  }
-  .navbar-toggler {
-    background-color: white;
-    @include tablet-landscape {
-      margin-top: 1.2rem;
-    }
-    @include tablet-potrait {
-      margin-top: 0;
-    }
-  }
-  .navbar-toggler-icon {
-    background-image: url('../images/svg/menu.svg');
-  }
-
-  li {
-    font-size: 0.9rem;
-    padding-right: 3rem;
-    font-family: 'Futura MD';
-    a {
-      img {
-        padding-bottom: 3px;
-      }
-        color: color(nav-title);
-    }
-    .sign-up {
-      @include sign-up;
-    }
-    @include tablet-landscape {
-      padding-right: 1rem;
-    }
-  }
-}
-
-
-section#hero {
-  padding-top: 7.8125rem;
-  padding-bottom: 7.8125rem;
-  @include phone {
-    padding-top: 1.5rem;
-    padding-bottom: 6rem;
-  }
-  h1 {
-    margin-bottom: 2rem;
-  }
-  a {
-    @include button;
-  }
-  .timeline-desktop {
-    display: flex;
-    margin-top: 9rem;
-    @include phone {
-      margin-top: 4rem;
-    }
-  }
-}
-
-
-
-
-section#our-solution {
-  .solution {
-    margin-bottom: 7.8125rem;
-    @include phone {
-      margin-bottom: 2rem;
-    }
-  }
-  .solution.hide {
-    @include tablet-potrait {
-      display: none;
-    }
-  }
-  .solution-phone {
-    display: none;
-    @include tablet-potrait {
-      display: block!important;
-    }
-  }
-  img {
-    @include phone {
-      margin: 2rem 0rem;
-      width: 12.5rem;
-    }
-  }
-  .circle-1 {
-    top:15%!important;
-    left: 60%!important;
-    @include pulsing-circle;
-  }
-  .circle-2 {
-    left: 25%!important;
-    top: 80%!important;
-    @include pulsing-circle;
-  }
-  .col-lg-8 {
-    padding-left: 0!important;
-  }
-}
-
-
-section#how-wedoit {
-  .timeline-desktop {
-    padding-top:7.8125rem;
-    padding-bottom: 4rem;
-    display: flex;
-    @include phone {
-      padding-top: 3rem;
-    }
-  }
-  .row {
-    padding-bottom: 7.8125rem;
-    @include phone {
-      padding-bottom: 3rem;
-    }
-  }
-  background-color: white;
-  h2 {
-    margin-bottom: 6rem;
-    @include phone {
-      margin-bottom: 3rem;
-    }
-  }
-}
-
-section#achievements {
-  padding-top:7.8125rem;
-  padding-bottom: 7.8125rem;
-  @include phone {
-    padding-top:3rem;
-    padding-bottom: 3rem;
-  }
-
-}
-
-section#contact-us {
-  padding-top: 7.8125rem;
-  padding-bottom: 7.8125rem;
-  @include phone {
-    padding-top:3rem;
-    padding-bottom: 3rem;
-  }
-  h2 {
-    margin-bottom: 4rem;
-  }
-  a {
-    @include button;
-  }
-}
-
-
-footer {
-  padding-top: 3.75rem;
-  border-top: 1px solid #E1E1E1;
-  @include phone {
-    .col-lg-2 {
-      padding-bottom: 1rem;
-    }
-  }
-  .footer-wrapper {
-    padding-bottom: 3.75rem;
-    @include phone {
-      padding-bottom: 1rem;
-  }
-  .para-text {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-  }
-  .footer-info {
-    @include phone {
-      padding-bottom: 2rem;
-    }
-    img {
-      padding-right: 1rem;
-    }
-    a {
-      font-size: 0.85rem;
-      font-family: 'Futura BK';
-      color: color(titlecolor);
-    }
-  }
-  li {
-    list-style: none;
-    line-height: 2.0;
-    a {
-      font-size: 0.85em;
-      color: color(textcolor);
-      }
-    }
-  }
-}
-
-section#copyright {
-  border-top: 1px solid #E1E1E1;
-
-  .copyright {
-    padding-top: 1.125rem;
-    padding-bottom: 1.125rem;
-    p, a {
-      font-family: 'Futura MD';
-      font-size: 0.85em;
-      color:color(textcolor);
-      margin-bottom: 0;
-      @include phone {
-        margin-bottom: 1rem;
-      }
-    }
-
-    .company-policy {
-      text-align: right;
-      @include phone {
-        text-align: left;
-      }
-      a {
-        padding-right: 5.75rem;
-        @include phone {
-          padding-right: 1rem;
-        }
-      }
-    }
-  }
-}
+// Components
+@import 'components/border-crumb';
+@import 'components/navigation';
+@import 'components/hero';
+@import 'components/solution';
+@import 'components/process';
+@import 'components/achievements';
+@import 'components/contact-us';
+@import 'components/material-input';
+@import 'components/footer_navigation';

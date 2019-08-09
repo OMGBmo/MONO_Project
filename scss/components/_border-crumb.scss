@@ -1,0 +1,21 @@
+// border-crumb
+.border-crumb {
+  position: fixed;
+  width: 13rem;
+  z-index: 100;
+  height: 100vh;
+  border-right: 0.0625rem solid color(border);
+  background-color: color(background);
+  &__logo {
+    padding-top: 2rem;
+    display: flex;
+    margin: auto;
+    width: 6.625rem;
+  }
+  @include tablet-landscape {
+    width: 10rem;
+  }
+  @include tablet-potrait {
+    display: none;
+  }
+}

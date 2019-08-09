@@ -1,0 +1,31 @@
+/* --- Our Process Section ---*/
+.process {
+  background-color: white;
+  @include padding-lg;
+
+  &__row {
+    @include padding-lg;
+    &__image {
+        position: absolute;
+        bottom:0;
+        right: 0;
+      @include tablet-landscape {
+        position: relative;
+        margin: 2rem 0rem;
+        width: 18rem;
+      }
+    }
+  }
+
+  &__timeline-desktop {
+    padding-bottom: 4rem;
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+    @include tablet-landscape {
+      margin-bottom: 2rem;
+    }
+  }
+}

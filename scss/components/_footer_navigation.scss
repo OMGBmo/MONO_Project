@@ -1,0 +1,60 @@
+
+/* --- Footer Section ---*/
+.footer {
+  @include padding-lg;
+  border-top: 1px solid color(border);
+
+  &__wrapper {
+
+    &__logo-text {
+      margin-top: 1rem;;
+    }
+
+    &__info {
+
+      @include phone {
+        padding-bottom: 2rem;
+      }
+
+      &__icon {
+        padding-right: 1rem;
+      }
+
+      &__link {
+        color: color(titlecolor);
+      }
+    }
+  }
+
+  &__navigation__item {
+    list-style: none;
+    line-height: 2.0;
+  }
+}
+
+/* --- Copyright Section ---*/
+.copyright {
+  border-top: 1px solid color(border);
+  @include padding-sm;
+
+    &__text {
+      margin-bottom: 0;
+      @include phone {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__policy {
+      text-align: right;
+      @include phone {
+        text-align: left;
+      }
+    }
+
+    &__link {
+      padding-right: 5.75rem;
+      @include phone {
+        padding-right: 1rem;
+      }
+    }
+}

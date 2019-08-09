@@ -1,0 +1,41 @@
+@mixin padding-sm {
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+
+@mixin padding-md {
+  padding-top: 1.95rem;
+  padding-bottom: 1.95rem;
+}
+
+@mixin padding-md-bottom {
+  padding-bottom: 1.95rem;
+  @include tablet-landscape {
+    padding-bottom:1.125rem ;
+  }
+}
+
+@mixin padding-lg {
+  padding-top: 3.90625rem;
+  padding-bottom: 3.90625rem;
+  @include phone {
+    @include padding-sm;
+  }
+  @include tablet-landscape {
+    @include padding-md;
+  }
+}
+
+@mixin padding-lg-bottom {
+  padding-bottom: 3.90625rem;
+  @include tablet-landscape {
+    padding-bottom:1.95rem ;
+  }
+}
+
+@mixin padding-lg-top {
+  padding-bottom: 3.90625rem;
+  @include tablet-landscape {
+    padding-top:1.95rem ;
+  }
+}

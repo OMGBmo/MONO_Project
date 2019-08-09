@@ -1,0 +1,47 @@
+/* --- Our Soluion Section ---*/
+.solution {
+  @include padding-lg;
+
+  &__row {
+    &:not(:last-child) {
+      @include padding-lg-bottom;
+    }
+
+    &--hide {
+      @include padding-lg-bottom;
+      @include tablet-landscape {
+        display: none;
+      }
+    }
+
+    &--phone {
+      @include padding-lg-bottom;
+      display: none;
+      @include tablet-landscape {
+        display: block!important;
+      }
+    }
+
+    &__image {
+      @include tablet-landscape {
+        margin: 2rem 0rem;
+        width: 12.5rem;
+      }
+    }
+    &__padding {
+      padding-left: 0!important;
+    }
+
+    &__circle--1 {
+      @include pulsing-circle;
+      top:15%;
+      left: 60%;
+    }
+
+    &__circle--2 {
+      @include pulsing-circle;
+      left: 25%;
+      top: 80%;
+    }
+  }
+}

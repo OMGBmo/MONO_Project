@@ -1,0 +1,28 @@
+/* --- Achievements Section ---*/
+.achievements {
+  @include padding-lg;
+
+  &__card {
+  @include achievements__card;
+
+    &__round-icon {
+    @extend .achievements__card__round-icon;
+    background-image: url('../images/svg/achievement_1.svg');
+    }
+
+    &__round-icon__2 {
+    @extend .achievements__card__round-icon;
+    background-image: url('../images/svg/achievement_2.svg');
+    }
+
+    &__round-icon__3 {
+    @extend .achievements__card__round-icon;
+    background-image: url('../images/svg/achievement_3.svg');
+    }
+
+    &__round-icon__4 {
+    @extend .achievements__card__round-icon;
+    background-image: url('../images/svg/achievement_4.svg');
+    }
+  }
+}
