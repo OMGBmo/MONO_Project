@@ -12,6 +12,7 @@
   <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel='icon' href='images/favicon.ico' type='image/x-icon'/ >
   </head>
 
   <body>
@@ -91,20 +92,20 @@
             <div class="row">
               <div class="col-lg-10">
                 <div class="hero__timeline-desktop">
-                  <div class="timeline">
-                    <img src="#" />
+                  <div id="timeline-section">
+                  <div id="timeline-copy-section">
                   </div>
-                  <div class="timeline">
-                    <img src="#" />
-                  </div>
-                  <div class="timeline">
-                    <img src="#" />
-                  </div>
-                  <div class="timeline">
-                    <img src="#" />
-                  </div>
+                  <div id="timeline">
+                    <div id="timeline-fill"></div>
+                    <div class="timeline-point selected" id="1"></div>
+                    <div class="timeline-point" id="2">
+                    </div>
+                    <div class="timeline-point" id="3"></div>
+                    <div class="timeline-point" id="4"></div>
                 </div>
-              </div>
+                </div>
+                </div>
+
             </div>
 
         </div>
@@ -208,6 +209,8 @@
   <!-- End Our Solution -->
   <!--------------------->
   <!-- How We Do It -->
+
+
 
   <section id="how-wedoit" class="wrapper-main process">
    <div class="container">
@@ -507,12 +510,13 @@
   </div>
 </section>
 
-
 <!-- End Footer -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
   <script src="js/google-maps.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/popup.js"></script>
   </body>
 </html>

@@ -15,10 +15,13 @@
   }
 
   &__timeline-desktop {
-    display: flex;
     margin-top: 9rem;
+    @include timeline;
     @include phone {
       margin-top: 4rem;
+    }
+    @include tablet-landscape {
+      display: none;
     }
   }
 }
