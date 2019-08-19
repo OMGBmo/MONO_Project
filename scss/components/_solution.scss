@@ -18,7 +18,7 @@
       @include padding-lg-bottom;
       display: none;
       @include tablet-landscape {
-        display: block!important;
+        display: flex!important;
       }
     }
 
@@ -41,7 +41,29 @@
     &__circle--2 {
       @include pulsing-circle;
       left: 25%;
-      top: 80%;
+      top: 50%;
+    }
+    &__circle--3 {
+      @include pulsing-circle;
+      top:15%;
+      left: 16%;
+    }
+
+    &__circle--4 {
+      @include pulsing-circle;
+      left: 35%;
+      top: 60%;
+    }
+    &__circle--5 {
+      @include pulsing-circle;
+      top:15%;
+      left: 60%;
+    }
+
+    &__circle--6 {
+      @include pulsing-circle;
+      left: 25%;
+      top: 50%;
     }
   }
 }

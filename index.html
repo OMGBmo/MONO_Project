@@ -88,7 +88,6 @@
               <a href="#" class="btn hero__accent-btn">Learn More</a>
             </div>
           </div>
-
             <div class="row">
               <div class="col-lg-10">
                 <div class="hero__timeline-desktop">
@@ -139,8 +138,9 @@
             </div>
 
               <div class="col-lg-4">
-                <a class="solution__row__circle--1" href="#"></a>
-                <a class="solution__row__circle--2" href="#"></a>
+
+                <a class="solution__row__circle--1" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
+                <a class="solution__row__circle--2" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
                 <img  class="solution__row__image" src="images/svg/illustration_1.svg" />
               </div>
           </div>
@@ -148,8 +148,8 @@
           <div class="row solution__row--hide">
 
             <div class="col-lg-6">
-                <a class="solution__row__circle--1" href="#"></a>
-                <a class="solution__row__circle--2" href="#"></a>
+              <a class="solution__row__circle--3" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
+              <a class="solution__row__circle--4" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
                 <img  class="solution__row__image" src="images/svg/illustration_2.svg" />
               </div>
             <div class="col-lg-4">
@@ -175,8 +175,8 @@
             </div>
 
               <div class="col-lg-4">
-                <a class="solution__row__circle--1" href="#"></a>
-                <a class="solution__row__circle--2" href="#"></a>
+                <a class="solution__row__circle--3" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
+                <a class="solution__row__circle--4" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
                 <img  class="solution__row__image" src="images/svg/illustration_2.svg" />
               </div>
           </div>
@@ -194,8 +194,8 @@
             </div>
 
               <div class="col-lg-4">
-                <a class="solution__row__circle--1" href="#"></a>
-                <a class="solution__row__circle--2" href="#"></a>
+                <a class="solution__row__circle--5" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
+                <a class="solution__row__circle--6" data-toggle="popover" data-content="Syoak is uniquely positioned to deliver actionable intelligence to analyze and reduce risk"></a>
                 <img  class="solution__row__image" src="images/svg/illustration_3.svg" />
               </div>
           </div>
@@ -517,6 +517,10 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/timeline.js"></script>
-  <script src="js/popup.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+  </script>
   </body>
 </html>
