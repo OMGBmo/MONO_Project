@@ -18,12 +18,20 @@
 @import './typography';
 
 // Components
-@import 'components/border-crumb';
+@import 'components/container';
+@import 'components/wrapper-main';
+@import 'components/sidebar';
 @import 'components/navigation';
-@import 'components/hero';
-@import 'components/solution';
-@import 'components/process';
-@import 'components/achievements';
-@import 'components/contact-us';
+@import 'components/pulsing-circle';
+@import 'components/popover';
+@import 'components/horizontal_scroll';
+@import 'components/achievement_card';
 @import 'components/material-input';
-@import 'components/footer_navigation';
+
+// Layout
+@import 'layout/hero';
+@import 'layout/solution';
+@import 'layout/process';
+@import 'layout/achievements';
+@import 'layout/contact-us';
+@import 'layout/footer_navigation';

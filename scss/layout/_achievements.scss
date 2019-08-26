@@ -1,0 +1,21 @@
+/* --- Achievements Section ---*/
+.achievements {
+  @include padding-lg;
+  &__card {
+    &__round-icon--build {
+    background-image: url('../images/svg/achievement_1.svg');
+    }
+
+    &__round-icon--work {
+    background-image: url('../images/svg/achievement_2.svg');
+    }
+
+    &__round-icon--project {
+    background-image: url('../images/svg/achievement_3.svg');
+    }
+
+    &__round-icon--ideas {
+    background-image: url('../images/svg/achievement_4.svg');
+    }
+  }
+}

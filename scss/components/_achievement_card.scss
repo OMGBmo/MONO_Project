@@ -1,0 +1,27 @@
+/* Achievements Card */
+.achievements__card {
+  padding: 2rem 1rem 1rem 1rem;
+  width: 100%;
+  max-width: 12rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.18);
+  &__round-icon {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.18);
+    position: absolute;
+    top:-25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__text {
+    margin-bottom: 0;
+  }
+  @include tablet-landscape {
+    max-width: 14rem;
+    margin-bottom: 4rem;
+  }
+}

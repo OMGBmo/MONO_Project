@@ -8,36 +8,10 @@ box-sizing: border-box;
 :root {
   font-size: 16px;
 }
-
+html {
+  height: 100%;
+}
 body {
   background-color: color(background);
-}
-
-.container {
-  margin-left: 0;
-  @include phone {
-    max-width: 100%;
-  }
-  @include tablet-potrait {
-    max-width: 100%;
-  }
-  @include desktop {
-    max-width: 1280px!important;
-  }
-}
-
-.wrapper-main {
-  padding-left: calc((100vw - 15rem) * .2 + 2rem);
-  @include tablet-potrait {
-    padding-left: 0!important;
-  }
-}
-
-.popover {
-  .arrow {
-    &:before, &:after {
-      display: none!important;
-    }
-
-  }
+  height: 100%;
 }

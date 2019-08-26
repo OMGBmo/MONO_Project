@@ -1,0 +1,61 @@
+/* --- Header ---*/
+.navigation {
+
+  &--menu-1 {
+    width: 100%;
+  }
+
+  &--menu-2 {
+    min-width: 27rem;
+  }
+
+  &__wrapper {
+    padding-top: 1.2rem;
+    @include tablet-landscape {
+      padding-left: 0!important;
+    }
+  }
+
+  &__logo {
+    @include tablet-potrait {
+      display: block!important;
+    }
+  }
+
+  &__toggler {
+    @include tablet-landscape {
+      margin-top: 1.2rem;
+    }
+    @include tablet-potrait {
+      margin-top: 0;
+    }
+  }
+
+  &__toggler-icon {
+    background-image: url('../images/svg/menu.svg');
+  }
+
+  &__item {
+    font-size: 0.9rem;
+    font-family: 'Futura MD';
+    &:not(:last-child) {
+      padding-right: 3rem;
+      @include tablet-landscape {
+        padding-right: 1rem;
+      }
+    }
+
+    &__link {
+    color: color(nav-title);
+
+      &__icons {
+        padding-bottom: 0.1875rem;
+      }
+
+      &__sign-up {
+        @include sign-up;
+      }
+
+    }
+  }
+}

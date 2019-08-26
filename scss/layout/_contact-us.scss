@@ -1,0 +1,27 @@
+/* --- Contact Us Section ---*/
+.contact-us {
+  @include padding-lg;
+
+  &__tittle {
+    margin-bottom: 3rem;
+  }
+
+  &__form {
+    @include padding-md;
+
+    &__button {
+      @include button;
+    }
+  }
+
+  &__google-wrapper {
+    @include padding-md;
+
+    &__google-map {
+      height: 25rem;
+      width: 100%;
+      max-width: 31.25rem;
+      border-radius: 10px;
+    }
+  }
+}

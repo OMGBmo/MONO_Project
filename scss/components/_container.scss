@@ -1,0 +1,12 @@
+.container {
+  margin-left: 0;
+  @include phone {
+    max-width: 100%;
+  }
+  @include tablet-potrait {
+    max-width: 100%;
+  }
+  @include desktop {
+    max-width: 1280px!important;
+  }
+}

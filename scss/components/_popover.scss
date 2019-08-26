@@ -1,0 +1,7 @@
+.popover {
+  .arrow {
+    &:before, &:after {
+      display: none!important;
+    }
+  }
+}

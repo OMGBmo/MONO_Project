@@ -1,0 +1,6 @@
+.wrapper-main {
+  padding-left: calc((100vw - 15rem) * .2 + 2rem);
+  @include tablet-potrait {
+    padding-left: 0!important;
+  }
+}

@@ -1,0 +1,27 @@
+/* --- Hero Section ---*/
+.hero {
+  @include padding-lg;
+
+  &__big-title {
+    @include padding-lg-top;
+    @include padding-md-bottom;
+    @include tablet-landscape {
+      padding-top: 0;
+    }
+  }
+
+  &__accent-btn {
+    @include button;
+  }
+
+  &__timeline-desktop {
+    margin-top: 9rem;
+    @include timeline;
+    @include phone {
+      margin-top: 4rem;
+    }
+    @include tablet-landscape {
+      display: none;
+    }
+  }
+}
